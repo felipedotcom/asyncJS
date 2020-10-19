@@ -1,0 +1,31 @@
+{
+    "profile": [
+
+      { 
+        "id": "1",
+        "email": "ryu@gmail.com", 
+        "senha": "senha123", 
+        "nome": "Ryu",
+        "dataNascimento": "12/12/2000",
+        "cpf": "12345678912",
+        "rg": "123456678",
+        "cep": "12210060",
+        "logradouro": "sao paulo",
+        "cidade": "sao paulo",
+        "estado": "sao paulo"
+    },
+    { 
+        "id": "2",
+        "email": "ryu@gmail.com", 
+        "senha": "senha123", 
+        "nome": "Ryu",
+        "dataNascimento": "12/12/2000",
+        "cpf": "12345678912",
+        "rg": "123456678",
+        "cep": "12210060",
+        "logradouro": "sao paulo",
+        "cidade": "sao paulo",
+        "estado": "sao paulo"
+    }
+  ]
+}

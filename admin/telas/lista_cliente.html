@@ -27,14 +27,17 @@
     </header>
 
     <main class="clientes-container">
-        <table class="tabela" data-tabela>
+        <table class="tabela">
             <thead>
                 <tr>
-                    <th class="tabela__coluna--p">CPF</th>
-                    <th class="tabela__coluna--g">Nome</th>
+                    <th class="tabela__coluna--p">Nome</th>
+                    <th class="tabela__coluna--g">Email</th>
                     <th class="tabela__coluna--m tabela__alinhamento--direita"><a href="./cadastra_cliente.html" class="botao-simples botao-simples--adicionar">Novo Cliente</a></th>
                 </tr>
             </thead>
+            <tbody data-tabela>
+
+            </tbody>
         </table>
         <div class="modal-container modal--fechado">
             <article class="modal">
@@ -52,6 +55,6 @@
     </main>
 </body> 
 
-<script type="module" src="../main.js"></script>
+<script type="module" src="../componentes/listaClientes.js"></script>
 </html>
 

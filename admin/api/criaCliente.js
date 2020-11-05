@@ -1,4 +1,4 @@
-export const criaCliente = (nome, cpf) => {
+export const criaCliente = (nome, email) => {
     return fetch(`http://localhost:3000/profile/`, {
         method: 'POST',
         headers: {
@@ -6,7 +6,7 @@ export const criaCliente = (nome, cpf) => {
         },
         body: JSON.stringify({
             nome: nome,
-            cpf: cpf,
+            email: email,
         })
     })
     .then(resp => resp.body)

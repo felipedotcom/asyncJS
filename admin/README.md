@@ -4,6 +4,4 @@ rodar o json server:
 json-server --watch db.json
 ```
 
-Abrir com live server dentro da pasta telas
-o arquivo:  
-`lista_cliente.html`
+Rodar: browser-sync start --server --file . --host --port 5000 --startPath admin/telas/lista_cliente.html

@@ -4,11 +4,10 @@ import { valida } from '../componentes/validacao.js'
 const formulario = document.querySelector('[data-form]')
 
 const inputs = document.querySelectorAll('input')
-console.log(inputs)
-    inputs.forEach(input => {
-        input.addEventListener('blur', (e) => {
-            valida(e.target)
-        })
+inputs.forEach(input => {
+    input.addEventListener('blur', (e) => {
+        valida(e.target)
+    })
 })
 
 formulario.addEventListener('submit', event => {
@@ -18,9 +17,9 @@ formulario.addEventListener('submit', event => {
     const email = event.target.querySelector('[data-email]').value
 
     criaCliente(nome, email)
-    .then(()=> {
-        window.location.href="../telas/cadastro_concluido.html"
-    })
+        .then(() => {
+            window.location.href = "../telas/cadastro_concluido.html"
+        })
 })
 
 

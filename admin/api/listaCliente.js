@@ -3,5 +3,4 @@ export const listaCliente = () => {
     .then( (resposta)=> { 
         return resposta.json()
     })
-    
 }

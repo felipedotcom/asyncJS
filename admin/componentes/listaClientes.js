@@ -3,8 +3,7 @@ import { deletaCliente } from '../api/deletaCliente.js'
 
 const criaNovaLinha = (nome, email, id) => {
     const linhaNovoCliente = document.createElement('tr')
-    const conteudo = `
-        
+    const conteudo = `      
             <td class="td" data-td>${nome}</td>
             <td>${email}</td>
             <td>
@@ -12,8 +11,7 @@ const criaNovaLinha = (nome, email, id) => {
                     <li><a href="../telas/edita_cliente.html?id=${id}" class="botao-simples botao-simples--editar">Editar</a></li>
                     <li><button class="botao-simples botao-simples--excluir" type="button">Excluir</button></li>
                 </ul>
-            </td>
-        
+            </td>     
     `
     linhaNovoCliente.innerHTML = conteudo
     linhaNovoCliente.dataset.id = id

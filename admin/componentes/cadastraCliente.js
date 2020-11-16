@@ -5,21 +5,24 @@ const formulario = document.querySelector('[data-form]')
 
 const inputs = document.querySelectorAll('input')
 inputs.forEach(input => {
-    input.addEventListener('blur', (e) => {
-        valida(e.target)
+    input.addEventListener('blur', (evento) => {
+        valida(evento.target)
     })
 })
 
-formulario.addEventListener('submit', event => {
-    event.preventDefault()
+formulario.addEventListener('submit', async evento => {
+    evento.preventDefault()
 
-    const nome = event.target.querySelector('[data-nome]').value
-    const email = event.target.querySelector('[data-email]').value
-
-    criaCliente(nome, email)
-        .then(() => {
-            window.location.href = "../telas/cadastro_concluido.html"
-        })
+    const nome = evento.target.querySelector('[data-nome]').value
+    const email = evento.target.querySelector('[data-email]').value
+    try {
+        await criaCliente(nome, email)
+        window.location.href = "../telas/cadastro_concluido.html"
+    }
+    catch(erro) { 
+        console.log(erro)
+    } // deixar como desafio passar o resto do codigo para async/await e try/catch
+   
 })
 
 

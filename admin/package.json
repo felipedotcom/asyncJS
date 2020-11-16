@@ -12,5 +12,6 @@
     "json-server": "^0.16.2"
   },
   "devDependencies": {
+    "browser-sync": "^2.26.13"
   }
 }

@@ -21,6 +21,7 @@ formulario.addEventListener('submit', async evento => {
     }
     catch(erro) { 
         console.log(erro)
+        window.location.href = "../telas/erro.html"
     } // deixar como desafio passar o resto do codigo para async/await e try/catch
    
 })

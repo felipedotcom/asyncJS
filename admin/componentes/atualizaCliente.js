@@ -47,15 +47,16 @@ import { valida } from '../componentes/validacao.js'
 
     const inputEmail = document.querySelector('[data-email]')
     const inputNome = document.querySelector('[data-nome]')
-    try { 
+    try {
         const dados = await detalhaCliente(id)
         inputNome.value = dados.nome
         inputEmail.value = dados.email
     }
-    catch(erro){
+    catch (erro) {
         console.log(erro)
+        window.location.href = "../telas/erro.html"
     }
-    
+
     const formulario = document.querySelector('[data-form]')
 
     const inputs = document.querySelectorAll('input')
@@ -67,12 +68,13 @@ import { valida } from '../componentes/validacao.js'
 
     formulario.addEventListener('submit', async evento => {
         evento.preventDefault()
-        try { 
-            await atualizaCliente(id, inputNome.value, inputEmail.value)        
+        try {
+            await atualizaCliente(id, inputNome.value, inputEmail.value)
             window.location.href = "../telas/edicao_concluida.html"
         }
-        catch(erro){
+        catch (erro) {
             console.log(erro)
+            window.location.href = "../telas/erro.html"
         }
     })
 })()

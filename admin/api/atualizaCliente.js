@@ -9,6 +9,7 @@ export const atualizaCliente = (id, nome, email) => {
             email: email
         })
     })
-    .then(response => response.json())
-
+        .then(response => {
+            return response.json()
+        })
 }

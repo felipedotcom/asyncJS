@@ -9,5 +9,12 @@ export const criaCliente = (nome, email) => {
             email: email,
         })
     })
-    .then(resp => resp.body)
+    .then(resposta => {
+        if(resposta.status === 200 ){
+            return resposta.body
+        }
+        else {
+            window.location.href = "../telas/erro.html"
+        }
+    })
 }

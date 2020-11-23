@@ -41,7 +41,6 @@ const render = async () => {
    try { 
     const listaClientes = await listaCliente()
     listaClientes.forEach(elemento => {
-        console.log(elemento)
         tabela.appendChild(criaNovaLinha(elemento.nome, elemento.email, elemento.id))
     });
    }

@@ -33,10 +33,20 @@ tabela.addEventListener('click', async (evento) => {
             console.log(erro)
             window.location.href = "../telas/erro.html"
         }
-        
     }
 })
 
+/* const render = () => { 
+    listaCliente()
+    .then(data => {
+        data.forEach(elemento => {
+            tabela.appendChild(criaNovaLinha(elemento.nome, elemento.email, elemento.id))
+        });
+    })
+    .catch(erro => {
+        console.log(erro)
+    })
+} */
 const render = async () => {
    try { 
     const listaClientes = await listaCliente()
@@ -50,9 +60,18 @@ const render = async () => {
    }
 }
 
-render()
+const loading = () => { 
+    const linhaNovoCliente = document.createElement('div')
+    const conteudo = `<img src="https://i1.wp.com/cloud.estacaonerd.com/wp-content/uploads/2020/09/01170918/cd399ec0-0637-463e-bdd3-bc2e20a30a3b.jpg?fit=1500%2C2222&ssl=1">`
 
-/* const enviaRequisicao = (metodo, url) => { 
+    linhaNovoCliente.innerHTML = conteudo
+    return linhaNovoCliente
+
+}
+setTimeout(()=> render() , 4000)
+
+/* setTimeout(()=> tabela.appendChild(loading()).remove(),0)
+ *//* const enviaRequisicao = (metodo, url) => { 
     const promise = new Promise((resolve, reject) => { 
         const http = new XMLHttpRequest();
 
